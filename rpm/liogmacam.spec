@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:           libogmacam
-Version:        1.55.24239
+Version:        1.55.24621
 Release:        0
 Summary:        Ogma Vision camera support library
 License:	GPLv2+
 Prefix:         %{_prefix}
 Provides:       libogmacam = %{version}-%{release}
-Obsoletes:      libogmacam < 1.55.24239
+Obsoletes:      libogmacam < 1.55.24621
 Source:         libogmacam-%{version}.tar.gz
 Patch0:         pkg-config.patch
 Patch1:         udev-rules.patch
@@ -20,7 +20,7 @@ Summary:        Development files for %{name}
 Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Provides:       libogmacam-devel = %{version}-%{release}
-Obsoletes:      libogmacam-devel < 1.55.24239
+Obsoletes:      libogmacam-devel < 1.55.24621
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -73,6 +73,8 @@ cp 70-ogma-cameras.rules %{buildroot}/etc/udev/rules.d
 %{_libdir}/pkgconfig/*.pc
 
 %changelog
+* Sat Feb 10 2024 James Fidell <james@openastroproject.org> - 1.55.24621-0
+- Update from upstream
 * Sat Jan 6 2024 James Fidell <james@openastroproject.org> - 1.55.24239-0
 - Initial RPM release
 

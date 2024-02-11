@@ -1,3 +1,9 @@
+libogmacam (1.55.24621-1) jammy; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Mon, 10 Feb 2024 22:42:00 +0000
+
 libogmacam (1.55.24239-1) jammy; urgency=medium
 
   * Initial release

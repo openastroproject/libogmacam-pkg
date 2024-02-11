@@ -1,4 +1,4 @@
-VERSION=1.55.24239
+VERSION=1.55.24621
 
 override_dh_auto_build:
 	dh_auto_build -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) VERSION=DEBVERSION
@@ -6,17 +6,17 @@ override_dh_auto_build:
 override_dh_auto_install:
 	case $(DEB_BUILD_ARCH) in \
 		i386) \
-			ln x86/libogmacam.bin x86/libogmacam.so; \
-			ln x86/libogmacam.bin x86/libogmacam.so.$(VERSION);; \
+			ln x86/libogmacam.so x86/libogmacam.so; \
+			ln x86/libogmacam.so x86/libogmacam.so.$(VERSION);; \
 		amd64) \
-			ln x64/libogmacam.bin x64/libogmacam.so; \
-			ln x64/libogmacam.bin x64/libogmacam.so.$(VERSION);; \
+			ln x64/libogmacam.so x64/libogmacam.so; \
+			ln x64/libogmacam.so x64/libogmacam.so.$(VERSION);; \
 		aarch64) \
-			ln arm64/libogmacam.bin arm64/libogmacam.so; \
-			ln arm64/libogmacam.bin arm64/libogmacam.so.$(VERSION);; \
+			ln arm64/libogmacam.so arm64/libogmacam.so; \
+			ln arm64/libogmacam.so arm64/libogmacam.so.$(VERSION);; \
 		armhf) \
-			ln armhf/libogmacam.bin armhf/libogmacam.so; \
-			ln armhf/libogmacam.bin armhf/libogmacam.so.$(VERSION);; \
+			ln armhf/libogmacam.so armhf/libogmacam.so; \
+			ln armhf/libogmacam.so armhf/libogmacam.so.$(VERSION);; \
 	esac
 	dh_auto_install -- SRCDIR=$(CURDIR) ARCH=$(DEB_TARGET_ARCH) \
 		INCDIR=$(CURDIR)/debian/tmp/usr/include \
